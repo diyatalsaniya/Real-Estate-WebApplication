@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Cormorant Garamond Font */
+:root {
+  --font-primary: "Cormorant Garamond", serif;
+  --font-size-base: 18px;
+}
+
+* {
+  font-family: var(--font-primary);
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+/* Utility classes for different font weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Italic style */
+.font-italic {
+  font-style: italic;
+}
