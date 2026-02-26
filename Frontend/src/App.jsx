@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home from './Pages/Home'
+import Header from './Pages/Home/Header'
 import Property from './pages/Property'
 import Contact from './pages/Contact'
 import Profile from './pages/Profile'
-import SellerDashboard from './Pages/Seller Dashboard/sellerHome'
-import AddProperty from './Pages/Seller Dashboard/AddProperty'
+import SellerDashboard from './components/Seller Dashboard/sellerHome'
+import AddProperty from './components/Seller Dashboard/AddProperty'
 
 const App = () => {
   const location = useLocation()
@@ -16,7 +16,7 @@ const App = () => {
     <div className='relative'>
       {!hideNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Header/>}/>
         <Route path="/property" element={<Property/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/profile" element={<Profile/>}/>
