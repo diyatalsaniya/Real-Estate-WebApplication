@@ -52,7 +52,7 @@ useEffect(() => {
         scrollRef.current.scrollBy({ left: offsetWidth, behavior: 'smooth' });
       }
     }
-  }, 3000);
+  }, 5000);
   return () => clearInterval(interval);
 }, []);
 
@@ -65,13 +65,8 @@ useEffect(() => {
       {/* 1. AUTO-SLIDING BACKGROUND IMAGES */}
       <div  ref={scrollRef} className='w-full h-screen overflow-x-auto flex flex-nowrap snap-x snap-mandatory scroll-smooth no-scrollbar'>
         {images.map((prop) => (
-          <img src={prop.img} alt={prop.alt} />
+          <img src={prop.img} alt={prop.alt} className='w-full h-full object-cover shrink-0'/>
         ))}
-        {/* <img src="/HomePageImage/HomeImage1.jpg" alt="Hero Image" className='w-full h-full object-cover shrink-0'/>
-        <img src="/HomePageImage/HomeImage2.jpg" alt="Hero Image" className='w-full h-full object-cover shrink-0'/>
-        <img src="/HomePageImage/HomeImage3.jpg" alt="Hero Image" className='w-full h-full object-cover shrink-0'/>
-        <img src="/HomePageImage/HomeImage4.jpg" alt="Hero Image" className='w-full h-full object-cover shrink-0'/>
-        <img src="/HomePageImage/HomeImage5.jpg" alt="Hero Image" className='w-full h-full object-cover shrink-0'/> */}
 
         {/* 2. DARK OVERLAY (Ensures text is readable) */}
       <div className='absolute inset-0 bg-black/40 pointer-events-auto'></div>

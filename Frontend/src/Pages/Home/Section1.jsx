@@ -60,7 +60,7 @@ const Section1 = () => {
               />
 
               {/* Top gradient + text */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-transparent" />
               <div className="absolute top-4 left-4">
                 <p className="text-white font-semibold text-sm">{prop.type}</p>
                 <p className="text-white/70 text-xs mt-0.5">
