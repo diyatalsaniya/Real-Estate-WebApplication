@@ -1,5 +1,5 @@
 import { useState } from "react";
-import signUp from "../mainpages/signUp.jpg";
+import signUp from "../Pages/signUp.jpg";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
