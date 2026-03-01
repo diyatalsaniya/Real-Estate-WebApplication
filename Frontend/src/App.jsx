@@ -12,9 +12,14 @@ const App = () => {
   const location = useLocation()
   const hideNavbar = location.pathname === '/seller' || location.pathname === '/seller/add-property'
 
+    // Add any pages where you don't want the Navbar to show
+  const hideNavbarOn = ["/signup", "/login"];
+  const showNavbar = !hideNavbarOn.includes(location.pathname);
+
   return (
     <div className='relative'>
       {!hideNavbar && <Navbar />}
+         {showNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Header/>}/>
         <Route path="/property" element={<Property/>}/>
@@ -22,6 +27,8 @@ const App = () => {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/seller" element={<SellerDashboard/>}/>
         <Route path="/seller/add-property" element={<AddProperty/>}/>
+                <Route path="/logIn"    element={<Login />} />
+        <Route path="/signup"   element={<SignUp />} />
       </Routes>
     </div>
   )
