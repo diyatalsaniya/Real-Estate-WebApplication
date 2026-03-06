@@ -7,6 +7,7 @@ import Section3 from './Section3';
 import Section4 from './Section4';
 import Section5 from './Section5';
 import Section6 from './Section6';
+import Footer from './Footer';
 
 const Home = () => {
 
@@ -61,11 +62,12 @@ useEffect(() => {
   return (
     <>
     <div className='relative w-full h-screen overflow-hidden font-body'>
+      <style>{`div::-webkit-scrollbar { display: none; }`}</style>
 
       {/* 1. AUTO-SLIDING BACKGROUND IMAGES */}
       <div  ref={scrollRef} className='w-full h-screen overflow-x-auto flex flex-nowrap snap-x snap-mandatory scroll-smooth no-scrollbar'>
         {images.map((prop) => (
-          <img src={prop.img} alt={prop.alt} className='w-full h-full object-cover shrink-0'/>
+          <img src={prop.img} alt={prop.alt} className='w-full h-full object-cover shrink-0'/> 
         ))}
 
         {/* 2. DARK OVERLAY (Ensures text is readable) */}
@@ -105,6 +107,7 @@ useEffect(() => {
     <Section4/>
     <Section5/>
     <Section6/>
+    <Footer/>
     </>
   )
 }

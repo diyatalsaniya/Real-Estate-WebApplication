@@ -20,7 +20,7 @@ const Navbar = () => {
         
         {/* LEFT: Logo Section */}
         <div className='shrink-0'>
-          <img src="/HomePageImage/main.png" alt="NestNova" className='h-10 w-auto object-contain drop-shadow-sm'/>
+          <img src="main.png" alt="NestNova" className='h-10 w-auto object-contain drop-shadow-sm'/>
         </div>
 
         {/* CENTER: Links */}
