@@ -3,11 +3,18 @@
 /* Cormorant Garamond Font */
 :root {
   --font-primary: "Cormorant Garamond", serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   --font-size-base: 18px;
 }
 
 * {
   font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -15,11 +22,35 @@ html {
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  overflow: hidden;
   font-family: "Cormorant Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
 }
 
 /* Utility classes for different font weights */
